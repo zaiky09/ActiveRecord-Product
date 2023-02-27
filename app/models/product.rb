@@ -3,18 +3,12 @@ class Product < ActiveRecord::Base
     has_many :reviews
     has_many :users, through: :reviews
 
-    def post_review(user,star_rating,comment)
+    def leave_review(user,star_rating,comment)
         rev = Review.create(user: user,star_rating: star_rating,comment: comment,product: self)
         reviews << rev
     end
 
-    def printall_reviews
-        reviews.each do |rev|
-            puts "Review for #{name} by #{review.user.name}: #{review.star_rating}.#{review.comment}"
-        end
-    end
-
-    def avg_rating
+    def average_rating
         sum = 0.0
         count = 0
 
@@ -24,5 +18,11 @@ class Product < ActiveRecord::Base
         end
 
         (sum / count).to_float
+    end
+
+    def print_all_reviews
+        reviews.each do |rev|
+            puts "Review for #{name} by #{review.user.name}: #{review.star_rating}.#{review.comment}"
+        end
     end
 end
