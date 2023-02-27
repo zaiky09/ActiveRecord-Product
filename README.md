@@ -1,4 +1,4 @@
-# ActiveRecord-Product
+# ActiveRecord-Product Review
 Code challenge 2 - Week 3 
 
 ## Pre-Requisites
