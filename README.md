@@ -44,7 +44,7 @@ products for the first user in the database based on your seed data, and
 Review.first.user should return the user for the first review in the database.
 
 - Review
-  Review#print_review
+  #### Review#print_review
   This should puts in the terminal a string formatted as follows: Review for {insert product name} by {insert user name}: {insert review star_rating}. {insert review comment}
  
 - Product
