@@ -10,6 +10,8 @@ gem 'sqlite3', '~> 1.6', '>= 1.6.1'
 
 gem 'require_all', '~> 3.0'
 
+gem 'sinatra-activerecord' , '~>2.0', '>= 2.0.26'
+
 group :development do
     gem 'pry', '~> 0.14.2'
 
